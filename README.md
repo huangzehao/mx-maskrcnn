@@ -112,11 +112,6 @@ A: This is because either
 Q: I encounter `incubator-mxnet/mshadow/mshadow/././././cuda/tensor_gpu-inl.cuh:110: Check failed: err == cudaSuccess (7 vs. 0) Name: MapPlanKernel ErrStr:too many resources requested for launch`
 
 A: Please try adding `MSHADOW_CFLAGS += -DMSHADOW_OLD_CUDA=1` in `mxnet/mshadow/make/mshadow.mk` and re-compile MXNet.
- 
-
-```
-bash scripts/demo.sh
-```
 
 ## References
 1. Tianqi Chen, Mu Li, Yutian Li, Min Lin, Naiyan Wang, Minjie Wang, Tianjun Xiao, Bing Xu, Chiyuan Zhang, and Zheng Zhang. MXNet: A Flexible and Efficient Machine Learning Library for Heterogeneous Distributed Systems. In Neural Information Processing Systems, Workshop on Machine Learning Systems, 2015
