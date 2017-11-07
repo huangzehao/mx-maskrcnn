@@ -100,16 +100,16 @@ bash scripts/eval.sh
 bash scripts/demo.sh
 ```
 ## FAQ
-Q: It says `AttributeError: 'module' object has no attribute 'ROIAlign'`
+Q: It says **`AttributeError: 'module' object has no attribute 'ROIAlign'`**
 
 A: This is because either
  - you forget to copy the operators to your MXNet folder
  - or you forget to re-compile MXNet and re-install MXNet python interface
  - or you install the wrong MXNet
  
-     Please print 'mxnet.__path__' to make sure you use correct MXNet
+     Please print `mxnet.__path__` to make sure you use correct MXNet
      
-Q: I encounter `incubator-mxnet/mshadow/mshadow/././././cuda/tensor_gpu-inl.cuh:110: Check failed: err == cudaSuccess (7 vs. 0) Name: MapPlanKernel ErrStr:too many resources requested for launch`
+Q: I encounter **`incubator-mxnet/mshadow/mshadow/././././cuda/tensor_gpu-inl.cuh:110: Check failed: err == cudaSuccess (7 vs. 0) Name: MapPlanKernel ErrStr:too many resources requested for launch`**
 
 A: Please try adding `MSHADOW_CFLAGS += -DMSHADOW_OLD_CUDA=1` in `mxnet/mshadow/make/mshadow.mk` and re-compile MXNet.
 
