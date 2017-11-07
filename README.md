@@ -107,6 +107,7 @@ A: This is because either
  - or you install the wrong MXNet
  
      Please print 'mxnet.__path__' to make sure you use correct MXNet
+     
 Q: I encounter `incubator-mxnet/mshadow/mshadow/././././cuda/tensor_gpu-inl.cuh:110: Check failed: err == cudaSuccess (7 vs. 0) Name: MapPlanKernel ErrStr:too many resources requested for launch`
 A: Please try adding `MSHADOW_CFLAGS += -DMSHADOW_OLD_CUDA=1` in `mxnet/mshadow/make/mshadow.mk` and re-compile MXNet.
  
